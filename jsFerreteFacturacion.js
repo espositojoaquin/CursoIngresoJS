@@ -5,12 +5,14 @@ C.	ingresar tres precios de productos  y mostrar precio final (más IVA 21%).
 */
 function Sumar () 
 {
-	var perciouno;
+	var preciouno;
 	var preciodos;
 	var preciotres;
 	var resultado;
 
-	
+	preciouno=document.getElementById('PrecioUno').value;
+	preciodos=document.getElementById('PrecioDos').value;
+	preciotres=document.getElementById('PrecioTres').value;
 	preciouno=parseInt(preciouno);
 	preciodos=parseInt(preciodos);
 	preciotres=parseInt(preciotres);
@@ -24,14 +26,21 @@ function Promedio ()
 	var perciouno;
 	var preciodos;
 	var preciotres;
+	var total;
 	var resultado;
+
+	preciouno=document.getElementById('PrecioUno').value;
+	preciodos=document.getElementById('PrecioDos').value;
+	preciotres=document.getElementById('PrecioTres').value;
 
 	
 	preciouno=parseInt(preciouno);
 	preciodos=parseInt(preciodos);
 	preciotres=parseInt(preciotres);
-	resultado=parseInt(preciouno%preciodos%preciotres);
-	alert("la suma es "+resultado);
+	total=parseInt(preciouno+preciodos+preciotres);
+	resultado=parseInt((total)/3);
+	
+	alert("el promedio es "+resultado);
 
 	
 }
@@ -44,16 +53,22 @@ function PrecioFinal ()
     var subresultado;
 	var iva;
 	var total;
+	preciouno=document.getElementById('PrecioUno').value;
+	preciodos=document.getElementById('PrecioDos').value;
+	preciotres=document.getElementById('PrecioTres').value;
 	preciouno=parseInt(preciouno);
 	preciodos=parseInt(preciodos);
 	preciotres=parseInt(preciotres);
+	subresultado=parseInt(subresultado);
+	iva=parseInt(iva);
+	total=parseInt(total);
 	
 	subresultado=parseInt(preciouno+preciodos+preciotres);
-	iva=parseInt((resultado*21)/100);
+	iva=parseInt((resultado*21)/100));
 	total=parseInt(subresultado+iva)
 
 	
-	alert("la suma es "+total);
+	alert("el precio final es "+total);
 
 	
 }
