@@ -1,11 +1,12 @@
 function Mostrar()
 {
+//tomo la edad  
 var edad;
 edad=document.getElementById('edad').value;
 
 if(edad>17)
 {
-	alert("la persona es mayor de edad");
+	alert("usted es mayor de edad");
 }
 
 
